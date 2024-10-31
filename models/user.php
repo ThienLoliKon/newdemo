@@ -6,7 +6,7 @@ class User extends Db
         $sql = self::$connection->prepare("SELECT * FROM categories");
         $sql->execute();
         $items = array();
-        $item = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items;
     }
 }
