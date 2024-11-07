@@ -98,6 +98,7 @@ var_dump($getAllCates);
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav mr-auto py-0">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
@@ -111,12 +112,14 @@ var_dump($getAllCates);
                     ?>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
-                <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
-                    <input type="text" class="form-control border-0" placeholder="Keyword">
+
+                <div name="keyword" class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+                    <input type="submit" class="form-control border-0" placeholder="Keyword">
                     <div class="input-group-append">
                         <button class="input-group-text bg-primary text-dark border-0 px-3"><i class="fa fa-search"></i></button>
                     </div>
                 </div>
+
             </div>
         </nav>
     </div>
