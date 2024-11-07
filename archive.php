@@ -1,13 +1,12 @@
 <?php
 include "header.php";
-if(isset($_GET['cate'])){
+if (isset($_GET['cate'])) {
     $cate = $_GET['cate'];
-}
-else{
+} else {
     header('location;index.php');
 }
-$getItemByCat = $item->getItemByCat($cate);
-$cateName = $item->getCatNameById($cate)[0]['name'];
+//$getItemByCat = $item->getItemByCat($cate);
+//$cateName = $item->$getNameById($cate)[0]['name'];
 var_dump($cateName);
 ?>
 <!-- News With Sidebar Start -->
@@ -18,7 +17,7 @@ var_dump($cateName);
                 <div class="row">
                     <div class="col-12">
                         <div class="section-title">
-                            <h4 class="m-0 text-uppercase font-weight-bold">Category: <?php echo $item->getCatNameById($cate)[0]['name']; ?></h4>
+                            <h4 class="m-0 text-uppercase font-weight-bold">Category: <?php echo $item->$getNameById($cate)[0]['name']; ?></h4>
                             <a class="text-secondary font-weight-medium text-decoration-none" href="">View All</a>
                         </div>
                     </div>

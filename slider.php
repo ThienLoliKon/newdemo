@@ -40,14 +40,14 @@
                                 <div class="mb-2">
                                     <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                         href="">Business</a>
-                                    <a class="text-white" href=""><small>Jan 01, 2045</small></a>
+                                    <a class="text-white" href=""><?php echo $value["created_at"] ?></a>
                                 </div>
                                 <a class="h6 m-0 text-white text-uppercase font-weight-semi-bold" href="">Lorem ipsum dolor sit amet elit...</a>
                             </div>
                         </div>
                     </div>
 
-                <?
+                <?php
                 endforeach;
                 ?>
             </div>
