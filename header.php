@@ -107,10 +107,11 @@ var_dump($getAllCates);
                     <?php
                     foreach ($getAllCates as $key => $value) :
                     ?>
-                        <a href="category.html" class="nav-item nav-link"><?php echo $value['name'] ?> </a>
+                        <a href="archive.php?cate-id=<?php echo $value['id'] ?>" class="nav-item nav-link"><?php echo $value['name'] ?> </a>
                     <?php
                     endforeach;
                     ?>
+
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
 
