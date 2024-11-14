@@ -109,7 +109,7 @@ var_dump($getAllCates);
                     ?>
                         <a href="category.html" class="nav-item nav-link"><?php echo $value['name'] ?> </a>
                     <?php
-                    endforeach
+                    endforeach;
                     ?>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
