@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2024 at 10:41 AM
+-- Generation Time: Nov 14, 2024 at 10:40 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -20,35 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `news`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `categories`
---
-
-CREATE TABLE `categories` (
-  `id` int(11) NOT NULL,
-  `name` varchar(225) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(225) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `parent` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `categories`
---
-
-INSERT INTO `categories` (`id`, `name`, `slug`, `parent`) VALUES
-(1, 'Tin tức', 'Tin-tuc', 0),
-(2, 'Đánh giá', 'Danh-gia', 0),
-(3, 'Tư liệu', 'Tu-lieu', 0),
-(4, 'Khảo sát', 'Khao-sat', 0),
-(5, 'Thể lệ', 'The-le', 0),
-(6, 'Thời sự', 'Thoi-su', 0),
-(7, 'Khoa học', 'Khoa-hoc', 0),
-(8, 'Giải trí', 'Giai-tri', 0),
-(9, 'Pháp luật', 'Phap-luat', 0),
-(10, 'Sức khoẻ', 'Suc-khoe', 0);
 
 -- --------------------------------------------------------
 
@@ -81,37 +52,9 @@ INSERT INTO `items` (`id`, `title`, `excerpt`, `content`, `image`, `category`, `
 (4, '\'Sinh viên IT cần biết lập trình trước khi vào đại học\'', 'Sinh viên cần biết ít nhất 1-2 ngôn ngữ lập trình trước khi vào đại học, làm nền tảng để học chuyên sâu, theo Giám đốc Công nghệ IBM Việt Nam.', 'Sinh viên cần biết ít nhất 1-2 ngôn ngữ lập trình trước khi vào đại học, làm nền tảng để học chuyên sâu, theo Giám đốc Công nghệ IBM Việt Nam.\r\n\r\nÝ kiến này được ông Ngô Thanh Hiền, Giám đốc Công nghệ IBM Việt Nam, nêu tại tọa đàm \"Giải mã nghịch lý ngành Công nghệ: Đại bàng gõ cửa nhưng nhân lực khép cửa\", ngày 1/11.\r\n\r\nÔng Hiền cho rằng việc học lập trình cần được đẩy mạnh từ bậc phổ thông để những em có đam mê hình thành ý thức nghề nghiệp từ sớm. Trước khi vào đại học, các em đã làm quen 1-2 ngôn ngữ lập trình, thậm chí biết thêm một số công cụ cần thiết.\r\n\r\nVào đại học, với nền tảng từ trước, sinh viên sẽ học thêm kiến thức rất nhanh, có thời gian để theo dõi, tìm hiểu xu thế công nghệ trên thế giới, từ đó biết phải chuẩn bị những gì.\r\n\r\n\"Đại học đào tạo cơ bản chứ không thể cung cấp hết kiến thức theo xu hướng công nghệ nên sinh viên phải chủ động\", ông Hiền nói.\r\n\r\n<img src=\"https://i1-vnexpress.vnecdn.net/2024/11/01/779b6e7e7cacc4f29dbd-5327-1730451187.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=CTdsb6mtiWg28NnqzflWyw\">\r\nÔng Ngô Thanh Hiền, Giám đốc Công nghệ IBM Việt Nam, chia sẻ tại tọa đàm ngày 1/11. Ảnh: D.T\r\n\r\nÔng Chu Tuấn Anh, Giám đốc hệ thống đào tạo lập trình viên quốc tế Aptech, đồng tình. Theo ông ở Việt Nam hiện nay, nhiều sinh viên vào đại học mà chưa có kiến thức về lập trình.\r\n\r\nTrong 4 năm, các em chỉ có khoảng 8 tháng đến một năm thực sự học các công nghệ lập trình thực tế để đi làm. Phần lớn thời gian còn lại được chia cho các môn đại cương, cơ sở, thực tập và làm đồ án.\r\n\r\n\"Dù các đại học đã cố gắng, sự chênh lệch giữa đào tạo và nhu cầu doanh nghiệp vẫn còn khoảng cách nhất định\", ông Tuấn Anh nói. \"Việc kỳ vọng sinh viên có thể nắm vững công nghệ, tích lũy kỹ năng và kinh nghiệm thực chiến chỉ trong thời gian đào tạo ngắn như vậy là bất khả thi\".\r\n\r\nTrong khi đó, tại các quốc gia phát triển như Mỹ, Anh, Hàn Quốc, sinh viên trước khi vào đại học đã thành thạo một số ngôn ngữ lập trình như Python, Java, giúp giảm tải cho việc đào tạo ở đại học.\r\n\r\nĐề xuất của ông Hiền và ông Tuấn Anh trong bối cảnh thị trường IT Việt Nam được dự đoán cần thêm ít nhất 500.000 lao động công nghệ từ nay đến năm 2025, theo Bộ Thông tin và Truyền thông.\r\n\r\nTuy nhiên, báo cáo năm 2023 của nền tảng tuyển dụng nhân sự công nghệ thông tin (IT) - TopDev, cho thấy trong hơn 57.000 sinh viên ngành này tốt nghiệp mỗi năm, chỉ khoảng 30% đáp ứng được yêu cầu của doanh nghiệp. Số còn lại cần được đào tạo thêm trong 3-6 tháng.\r\n\r\nTheo bà Nguyễn Thị Thu Giang, Tổng thư ký Hiệp hội phần mềm và dịch vụ công nghệ thông tin Việt Nam (VINASA), doanh nghiệp cho biết trong hàng trăm người nộp đơn, có khi chỉ nhận được 1-2 người ở mỗi đợt tuyển dụng.\r\n\r\nÔng Hiền kể năm 2002, IBM mở trung tâm nghiên cứu và phát triển (R&D) gia công phần mềm ở Việt Nam, bên cạnh mảng kinh doanh. Khi đó, doanh nghiệp kỳ vọng tuyển dụng được 1.000 lập trình viên trong thời gian ngắn. Nhưng sau hơn 10 năm, trung tâm này chỉ có 200-300 nhân sự.\r\n\r\n<img src=\"https://i1-vnexpress.vnecdn.net/2024/11/01/1d7408c01a12a24cfb03-3297-1730451187.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=czpuiw57lGxBsWlbDUqugw\">\r\nÔng Chu Tuấn Anh, đại diện Aptech Việt Nam, tại tọa đàm ngày 1/11. Ảnh: D.T\r\n\r\nÔng Tô Hồng Nam, Phó cục trưởng Cục Công nghệ thông tin, Bộ Giáo dục và Đào tạo, cho hay hiện Tin học đã trở thành môn bắt buộc từ lớp 3 đến lớp 9, từ lớp 10 là môn lựa chọn. Môn này có ba mạch kiến thức gồm: học vấn số hóa phổ thông, công nghệ thông tin và truyền thông, khoa học máy tính. Các nội dung không chỉ dừng lại ở mức hiểu biết mà còn yêu cầu ứng dụng và định hướng làm nghề. Học sinh được học về lập trình nhiều hơn trước.\r\n\r\nỞ bậc đại học, các trường đã kết nối với doanh nghiệp nhiều hơn, sinh viên được học theo dự án, ra trường có việc làm ngay.\r\n\r\n\"Các trường cũng chủ động nâng cao chất lượng\", ông Nam nói. \"Vấn đề là học như nào để có chất lượng\". Đại diện Bộ cho rằng ngoài kiến thức chuyên môn, người học cần có ngoại ngữ, kỹ năng mềm, được trau dồi cả ở trong và ngoài trường lớp.', 'https://media.cnn.com/api/v1/images/stellar/prod/221027124910-01-emperor-penguins.jpg', 0, 0, 0, '2024-11-02 13:45:06', '2024-11-02 13:45:06', '4'),
 (5, 'Lo mưa lũ và lở đất, Nhật Bản kêu gọi gần 200.000 người sơ tán', 'Giới chức miền tây Nhật Bản cảnh báo nguy cơ sạt lở đất và ngập lụt do hoàn lưu bão Kong-rey, khuyến cáo gần 200.000 người dân sơ tán.', 'Giới chức miền tây Nhật Bản cảnh báo nguy cơ sạt lở đất và ngập lụt do hoàn lưu bão Kong-rey, khuyến cáo gần 200.000 người dân sơ tán.\r\n\r\nCơ quan khí tượng Nhật Bản (JMA) hôm nay cho biết \"không khí ấm, ẩm đang gây mưa to kèm giông bão ở miền tây đất nước\", một phần do ảnh hưởng của hoàn lưu của Kong-rey, siêu bão vừa quét qua đảo Đài Loan và đã hạ cấp xuống áp thấp nhiệt đới.\r\n\r\nThành phố Matsuyama thuộc tỉnh Ehime đã ban hành cảnh báo cấp cao nhất, kêu gọi gần 189.552 cư dân ở 10 quận khẩn trương sơ tán để đảm bảo an toàn. Luật pháp Nhật Bản không có quy định bắt buộc người dân sơ tán, nhưng giới chức thường ban hành cảnh báo cấp cao nhất khi có nguy cơ xảy ra thiên tai và thảm họa.\r\n\r\n<img src=\"https://i1-vnexpress.vnecdn.net/2024/11/02/mua-lu-nhat-ban-1-2908-1730536890.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=mOHg9dsTGWIiQfQk_7Ze6g\">\r\n\r\nMột tuyến đường bị ngập do mưa lớn tại thành phố Hiroshima hồi đầu tháng 10. Ảnh: AFP\r\n\r\nShunan, thành phố thuộc tỉnh Yamaguchi, sáng nay ghi nhận lượng mưa hơn 35 mm trong một giờ. Ở thành phố Imari thuộc tỉnh Saga, lượng mưa đo được lên tới 296,5 mm trong vòng 24 giờ, gấp đôi tổng lượng mưa trung bình trong tháng 11 hàng năm.\r\n\r\n127 trạm quan trắc ở các vùng Kyushu, Chugoku và Kinki đã ghi nhận lượng mưa trong 24 giờ vào một ngày tháng 11 nhiều nhất từ trước tới nay. Chính quyền đã ban bố cảnh báo sạt lở đất tại các khu vực thuộc tỉnh Fukuoka, Shimane và Hiroshima. Mực nước tại một số sông ở ba tỉnh này đang dâng vượt mức báo động lũ.\r\n\r\nGiới chức kêu gọi người dân thận trọng trước nguy cơ sạt lở đất, ngập lụt ở vùng trũng thấp, nước sông dâng cao tràn bờ, sấm sét, mưa đá, gió giật và lốc xoáy, khuyến cáo tránh lái xe trên các tuyến đường ven sông trong thời gian này.\r\n\r\nCác chuyên gia khí tượng cảnh báo rằng sạt ngập lụt, sạt lở đất có thể xảy ra ở miền tây Nhật Bản từ chiều nay và miền đông Nhật Bản trong ngày 3/11. Do mưa lớn, tàu cao tốc Shinkansen đã ngừng hoạt động trên tuyến Tokyo - Fukuoka trong sáng 2/11, khiến nhiều chuyến bị trễ so với kế hoạch.\r\n\r\nKong-rey đổ bộ vào đảo Đài Loan ngày 31/10, là một trong những cơn bão lớn nhất quét qua khu vực trong nhiều thập kỷ. Cơn bão có sức gió 251 km/h, bán kính bão gần 320 km, gây mưa to ở nhiều khu vực, khiến ít nhất hai người chết và hàng chục nghìn hộ dân mất điện.', 'https://media.cnn.com/api/v1/images/stellar/prod/221027124910-01-emperor-penguins.jpg', 0, 0, 0, '2024-11-02 13:47:56', '2024-11-02 13:47:56', '5');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `name` varchar(225) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `name`) VALUES
-(1, 'Vũ Hoàng'),
-(2, 'Phạm Dự'),
-(3, 'Hà Thu'),
-(4, 'Dương Tâm'),
-(5, 'Hồng Hạnh');
-
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `categories`
---
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `items`
@@ -120,31 +63,13 @@ ALTER TABLE `items`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `categories`
---
-ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
